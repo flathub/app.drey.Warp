@@ -26,15 +26,15 @@ modules:
       - -Dprofile=default
     sources:
       - type: git
+        tag: v0.1.1
         url: https://gitlab.gnome.org/felinira/warp.git
-        tag: v0.1.0
-        commit: 808ad21eb6832d29fe3233ba08d72b079952c08d
+        commit: 24667adfbeada9556d39e260901a3aca232e21c1
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
-      - type: file
-        path: cargo-config.toml
-        dest: .cargo
-        dest-filename: config
       # generated via flatpak-builder-tools
       - cargo-sources.json
+      - type: shell
+        commands:
+          - mkdir .cargo
+          - cp cargo/config .cargo/
