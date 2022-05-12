@@ -1,4 +1,3 @@
----
 app-id: app.drey.Warp
 runtime: org.gnome.Platform
 runtime-version: '42'
@@ -27,8 +26,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/felinira/warp.git
-        tag: v0.1.0
-        commit: 808ad21eb6832d29fe3233ba08d72b079952c08d
+        tag: v0.1.1
+        commit: 8cc2e8b7d565cef7286638518cab9d5de62359ea
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
