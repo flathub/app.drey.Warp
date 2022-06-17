@@ -27,7 +27,7 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/felinira/warp.git
-        commit: 6f34f091d29309320eac8192e1e62bb0a0b38210
+        commit: d2e2d0c84faa703553f837b3821c5d926e7c94c1
       # generated via flatpak-builder-tools
       - cargo-sources.json
       - type: shell
