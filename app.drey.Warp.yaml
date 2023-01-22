@@ -1,7 +1,7 @@
 ---
 app-id: app.drey.Warp
 runtime: org.gnome.Platform
-runtime-version: '42'
+runtime-version: '43'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -17,6 +17,10 @@ finish-args:
   - --share=network
   # Save files in the Downloads directory
   - --filesystem=xdg-download
+  # Inhibit shutdown and sleep
+  - --system-talk-name=org.freedesktop.login1
+  # Open folder in filebrowser
+  - --talk-name=org.freedesktop.FileManager1
 build-options:
   append-path: /usr/lib/sdk/rust-stable/bin
 modules:
@@ -26,8 +30,8 @@ modules:
       - -Dprofile=default
     sources:
       - type: git
-        url: https://gitlab.gnome.org/felinira/warp.git
-        commit: 7486a60741e2ea0f27fe0226830af238497a2900
+        url: https://gitlab.gnome.org/World/warp.git
+        commit: 6c4fa76f13eb018162b1f1ad78536a3d6a2e7017
       # generated via flatpak-builder-tools
       - cargo-sources.json
       - type: shell
