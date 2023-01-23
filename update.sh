@@ -1,5 +1,5 @@
 #!/bin/sh
-git pull --rebase 'https://github.com/flathub/app.drey.Warp.git' beta
+git pull --rebase 'https://github.com/flathub/app.drey.Warp.git' -Xtheirs beta
 
 GITLAB_PROJECT_ID=19921
 
