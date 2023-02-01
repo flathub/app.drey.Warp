@@ -31,7 +31,7 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/World/warp.git
-        commit: 6c4fa76f13eb018162b1f1ad78536a3d6a2e7017
+        commit: 259b7653f0b7e7b7b43e55d19064a170f26c9186
       # generated via flatpak-builder-tools
       - cargo-sources.json
       - type: shell
