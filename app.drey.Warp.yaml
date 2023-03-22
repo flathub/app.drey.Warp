@@ -1,7 +1,7 @@
 ---
 app-id: app.drey.Warp
 runtime: org.gnome.Platform
-runtime-version: '43'
+runtime-version: '44'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -31,7 +31,7 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/World/warp.git
-        commit: 5792e523c6ca22abd4e78d4e53c36bae6649b289
+        commit: 3a49f30ca03777bc879851424aa86423a0d85a7b
       # generated via flatpak-builder-tools
       - cargo-sources.json
       - type: shell
