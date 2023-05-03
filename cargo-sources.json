@@ -2173,6 +2173,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/memmap/memmap-0.7.0.crate",
+        "sha256": "6585fd95e7bb50d6cc31e20d4cf9afb4e2ba16c5846fc76793f11218da9c475b",
+        "dest": "cargo/vendor/memmap-0.7.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"6585fd95e7bb50d6cc31e20d4cf9afb4e2ba16c5846fc76793f11218da9c475b\", \"files\": {}}",
+        "dest": "cargo/vendor/memmap-0.7.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/memmap2/memmap2-0.5.10.crate",
         "sha256": "83faa42c0a078c393f6b29d5db232d8be22776a891f8f56e5284faee4a20b327",
         "dest": "cargo/vendor/memmap2-0.5.10"
