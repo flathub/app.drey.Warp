@@ -1,7 +1,7 @@
 ---
-app-id: app.drey.Warp
+id: app.drey.Warp
 runtime: org.gnome.Platform
-runtime-version: '44'
+runtime-version: '45beta'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -23,8 +23,6 @@ finish-args:
   - --filesystem=xdg-download
   # Inhibit shutdown and sleep
   - --system-talk-name=org.freedesktop.login1
-  # Open folder in filebrowser
-  - --talk-name=org.freedesktop.FileManager1
 modules:
   - name: warp
     buildsystem: meson
@@ -33,7 +31,7 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/World/warp.git
-        commit: ded6d4e29678913e4e393c0a4064b3014e429ee5
+        commit: 4609d449c3df7f4785e30d573a9f00fdf1b62b9f
       # generated via flatpak-builder-tools
       - cargo-sources.json
       - type: shell
