@@ -1,7 +1,7 @@
 ---
 id: app.drey.Warp
 runtime: org.gnome.Platform
-runtime-version: "46beta"
+runtime-version: "46"
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -63,7 +63,7 @@ modules:
       - type: git
         disable-submodules: true
         url: https://gitlab.freedesktop.org/gstreamer/gstreamer.git
-        tag: "1.22.6"
+        tag: "1.22.11"
   - name: warp
     buildsystem: meson
     config-opts:
@@ -72,7 +72,7 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/World/warp.git
-        commit: a5234112f2127370dab0c6d09a38cd2d4fc44530
+        commit: ce2e235adc5e27a7249af01a3b41193434725571
       # generated via flatpak-builder-tools
       - cargo-sources.json
       - type: shell
