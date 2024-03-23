@@ -1,14 +1,12 @@
 ---
 id: app.drey.Warp
 runtime: org.gnome.Platform
-runtime-version: '45'
+runtime-version: "46"
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
 build-options:
   append-path: /usr/lib/sdk/rust-stable/bin
-  env:
-    CARGO_REGISTRIES_CRATES_IO_PROTOCOL: "sparse"
 command: warp
 finish-args:
   # X11 and Wayland
@@ -24,14 +22,57 @@ finish-args:
   # Inhibit shutdown and sleep
   - --system-talk-name=org.freedesktop.login1
 modules:
+  - name: zbar
+    config-opts:
+      - --disable-doc
+      - --disable-video
+      - --enable-codes=qrcode
+      - --without-dbus
+      - --without-directshow
+      - --without-gir
+      - --without-graphicsmagick
+      - --without-gtk
+      - --without-imagemagick
+      - --without-jpeg
+      - --without-java
+      - --without-npapi
+      - --without-python
+      - --without-qt
+      - --without-qt5
+      - --without-xshm
+      - --without-xv
+    sources:
+      - type: archive
+        url: https://linuxtv.org/downloads/zbar/zbar-0.23.1.tar.gz
+        sha256: c72b19eb63f48781ae5ff1830236f4e753f4bd6418cd781aea1cd85d625b119e
+      - type: script
+        dest-filename: autogen.sh
+        commands:
+          - autoreconf -vfi -W none
+  - name: gst-bad-plugins
+    buildsystem: meson
+    subdir: subprojects/gst-plugins-bad
+    config-opts:
+      - -Dzbar=enabled
+      - -Drsvg=disabled
+      - -Dvulkan=disabled
+      - -Dexamples=disabled
+      - -Dtests=disabled
+      - -Dintrospection=disabled
+    sources:
+      - type: git
+        disable-submodules: true
+        url: https://gitlab.freedesktop.org/gstreamer/gstreamer.git
+        tag: "1.22.11"
   - name: warp
     buildsystem: meson
     config-opts:
       - -Dprofile=default
+      - -Dqr-code-scanning=enabled
     sources:
       - type: git
         url: https://gitlab.gnome.org/World/warp.git
-        commit: 1daa60691aa1a697acaff55450dcccb085023fc7
+        commit: ce2e235adc5e27a7249af01a3b41193434725571
       # generated via flatpak-builder-tools
       - cargo-sources.json
       - type: shell
