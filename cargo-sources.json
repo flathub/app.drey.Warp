@@ -2732,19 +2732,6 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/mio/mio-1.0.3.crate",
-        "sha256": "2886843bf800fba2e3377cff24abf6379b4c4d5c6681eaf9ea5b0d15090450bd",
-        "dest": "cargo/vendor/mio-1.0.3"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"2886843bf800fba2e3377cff24abf6379b4c4d5c6681eaf9ea5b0d15090450bd\", \"files\": {}}",
-        "dest": "cargo/vendor/mio-1.0.3",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/muldiv/muldiv-1.0.1.crate",
         "sha256": "956787520e75e9bd233246045d19f42fb73242759cc57fba9611d940ae96d4b0",
         "dest": "cargo/vendor/muldiv-1.0.1"
@@ -4105,19 +4092,6 @@
         "type": "inline",
         "contents": "{\"package\": \"9117f5d4db391c1cf6927e7bea3db74b9a1c1add8f7eda9ffd5364f40f57b82f\", \"files\": {}}",
         "dest": "cargo/vendor/tinystr-0.7.6",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/tokio/tokio-1.44.1.crate",
-        "sha256": "f382da615b842244d4b8738c82ed1275e6c5dd90c459a30941cd07080b06c91a",
-        "dest": "cargo/vendor/tokio-1.44.1"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"f382da615b842244d4b8738c82ed1275e6c5dd90c459a30941cd07080b06c91a\", \"files\": {}}",
-        "dest": "cargo/vendor/tokio-1.44.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
